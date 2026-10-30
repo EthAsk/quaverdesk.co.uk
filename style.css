@@ -228,7 +228,7 @@ td .yr { display: block; font-size: .8rem; color: var(--muted); }
 /* Footer */
 footer { padding: 56px 0 40px; border-top: 1px solid var(--line); font-size: .92rem; color: var(--muted); }
 footer .cols { display: grid; gap: 28px; }
-@media (min-width: 760px) { footer .cols { grid-template-columns: 1.4fr 1fr 1fr 1fr; } }
+@media (min-width: 760px) { footer .cols { grid-template-columns: 1.4fr repeat(4, 1fr); } }
 footer h3 { font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: var(--ink); margin-bottom: 10px; }
 footer ul { list-style: none; padding: 0; margin: 0; }
 footer li { margin: 6px 0; }
@@ -240,3 +240,16 @@ footer .legal { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(-
 .page { max-width: 760px; padding: 64px 16px 88px; margin: 0 auto; }
 .page h1 { font-size: clamp(2rem, 4vw, 2.6rem); }
 .page h2 { font-size: 1.3rem; margin-top: 1.8em; }
+.page .lead { font-size: 1.15rem; color: var(--muted); }
+.page ul, .page ol { padding-left: 1.3em; }
+.page li { margin: 0.4em 0; }
+.order { margin-top: 28px; }
+.order-grid { display: grid; gap: 14px; margin-top: 16px; }
+@media (min-width: 760px) { .order-grid { grid-template-columns: repeat(3, 1fr) auto; align-items: end; } .order-grid .check, .order-grid .btn { grid-column: 1 / -1; } .order-grid .btn { justify-self: start; } }
+.order-grid label { display: grid; gap: 6px; font-weight: 600; font-size: .95rem; }
+.order-grid select { font: inherit; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); color: var(--ink); }
+.order-grid .check { display: flex; gap: 10px; align-items: flex-start; font-weight: 400; }
+.order-grid .check input { margin-top: 4px; }
+.order-price { margin: 0; }
+.order-price .price { font-size: 1.8rem; font-weight: 800; }
+.order-grid .btn { font: inherit; font-weight: 650; cursor: pointer; }
