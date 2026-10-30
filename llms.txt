@@ -17,8 +17,8 @@ Key facts:
 - [Home, features, pricing and FAQ](https://quaverdesk.co.uk/)
 - [Self-hosted business phone system](https://quaverdesk.co.uk/self-hosted-phone-system.html)
 - [A 3CX alternative for small UK businesses](https://quaverdesk.co.uk/3cx-alternative.html)
-- [A phone system for your Twilio SIP trunk](https://quaverdesk.co.uk/twilio-sip-trunk-phone-system.html)
-- [A phone system for charities, churches and volunteer groups](https://quaverdesk.co.uk/phone-system-for-charities.html)
+- [A phone system for your SIP trunk (Gamma, Voiceflex, Twilio and more)](https://quaverdesk.co.uk/sip-trunk-phone-system.html)
+- [A phone system for charities and not-for-profits](https://quaverdesk.co.uk/phone-system-for-charities.html)
 
 ## Code and docs
 

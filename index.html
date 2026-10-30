@@ -30,7 +30,7 @@
             <a href="#pricing">Pricing</a>
             <a href="#faq">FAQ</a>
             <a href="https://github.com/EthAsk/QuaverDesk">GitHub</a>
-            <a class="btn" href="https://quaverdesk.app/pricing">Buy a licence</a>
+            <a class="btn" href="/#order">Buy a licence</a>
         </nav>
         <a class="btn mobile-buy" href="#pricing">Pricing</a>
     </div>
@@ -202,7 +202,7 @@
                         <li>AI transcripts and summaries</li>
                         <li>Passkey sign-in</li>
                     </ul>
-                    <a class="btn" href="https://quaverdesk.app/pricing">Buy Plus</a>
+                    <a class="btn" href="#order" data-plan="plus">Buy Plus</a>
                 </div>
                 <div class="card plan">
                     <h3>Pro</h3>
@@ -214,7 +214,7 @@
                         <li>Choose how long recordings are kept</li>
                         <li>Priority email support</li>
                     </ul>
-                    <a class="btn ghost" href="https://quaverdesk.app/pricing">Buy Pro</a>
+                    <a class="btn ghost" href="#order" data-plan="pro">Buy Pro</a>
                 </div>
             </div>
 
@@ -233,6 +233,27 @@
                 </table>
             </div>
             <p class="small muted" style="margin-top:14px">No VAT is added: the price shown is what you pay. Pay yearly and get 12 months for the price of 10. Licences are for businesses, for use within one organisation. Calls are billed by your SIP trunk provider; AI usage by your AI provider.</p>
+
+            <div class="card order" id="order">
+                <h3>Buy a licence</h3>
+                <p class="muted small">Pick your plan and team size. You'll pay securely with Stripe, and your licence key arrives by email.</p>
+                <form id="order-form" class="order-grid">
+                    <label>Plan
+                        <select name="plan"><option value="plus">Plus</option><option value="pro">Pro</option></select>
+                    </label>
+                    <label>Users
+                        <select name="band"><option value="5">Up to 5</option><option value="10">6–10</option><option value="25">11–25</option><option value="50">26–50</option><option value="100">51–100</option></select>
+                    </label>
+                    <label>Billing
+                        <select name="interval"><option value="month">Monthly</option><option value="year">Yearly (12 months for the price of 10)</option></select>
+                    </label>
+                    <p class="order-price" aria-live="polite"><span class="price" id="order-price">£15</span> <small id="order-per">/ month</small></p>
+                    <label class="check"><input type="checkbox" name="business" required> I am buying for a business, not as a consumer.</label>
+                    <label class="check"><input type="checkbox" name="terms" required> I accept the <a href="https://github.com/EthAsk/QuaverDesk/blob/main/COMMERCIAL-TERMS.md">commercial terms</a> and understand the software is provided as is and is not a replacement for a landline or mobile for emergency calls.</label>
+                    <button class="btn" type="submit">Continue to payment</button>
+                </form>
+                <noscript><p class="small">Ordering needs JavaScript. Or email <a href="mailto:sales@quaverdesk.co.uk?subject=Quaver%20Desk%20licence">sales@quaverdesk.co.uk</a> and we'll send you a payment link.</p></noscript>
+            </div>
 
             <div class="card hosted" id="hosted">
                 <div>
@@ -314,7 +335,7 @@
                 <h2>Ready to take calls your way?</h2>
                 <p>Install Quaver Desk for free today, and buy a licence when you're ready for Plus or Pro.</p>
                 <div class="actions">
-                    <a class="btn" href="https://quaverdesk.app/pricing">Buy a licence</a>
+                    <a class="btn" href="/#order">Buy a licence</a>
                     <a class="btn ghost" href="mailto:sales@quaverdesk.co.uk?subject=Quaver%20Desk">Talk to us</a>
                 </div>
             </div>
@@ -337,7 +358,7 @@
                 <ul>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="https://quaverdesk.app/pricing">Buy a licence</a></li>
+                    <li><a href="/#order">Buy a licence</a></li>
                     <li><a href="https://billing.stripe.com/p/login/8x28wP4F96la2eR15f8Zq00">Manage your subscription</a></li>
                     <li><a href="https://github.com/EthAsk/QuaverDesk">Code and install guide</a></li>
                 </ul>
@@ -347,8 +368,8 @@
                 <ul>
                     <li><a href="/self-hosted-phone-system.html">Self-hosted phone system</a></li>
                     <li><a href="/3cx-alternative.html">A 3CX alternative</a></li>
-                    <li><a href="/twilio-sip-trunk-phone-system.html">Phone system for Twilio</a></li>
-                    <li><a href="/phone-system-for-charities.html">For charities and churches</a></li>
+                    <li><a href="/sip-trunk-phone-system.html">Phone system for your SIP trunk</a></li>
+                    <li><a href="/phone-system-for-charities.html">For charities and not-for-profits</a></li>
                 </ul>
             </div>
             <div>
@@ -371,5 +392,29 @@
         <p class="legal">© 2026 Ethan Askew trading as Quaver Desk, 119 Ridgehill Avenue, Intake, Sheffield, S12 2GN. "Quaver Desk" is a trading name of Ethan Askew.</p>
     </div>
 </footer>
+<script>
+(function () {
+    var links = {"qd_plus_5_month": "https://buy.stripe.com/8x28wP4F96la2eR15f8Zq00", "qd_plus_5_year": "https://buy.stripe.com/5kQdR94F9aBq4mZ3dn8Zq01", "qd_plus_10_month": "https://buy.stripe.com/eVq14nfjNbFucTv7tD8Zq02", "qd_plus_10_year": "https://buy.stripe.com/4gMdR97RldNC6v78xH8Zq03", "qd_plus_25_month": "https://buy.stripe.com/14AbJ11sX4d25r37tD8Zq04", "qd_plus_25_year": "https://buy.stripe.com/fZu3cv6Nh24UaLncNX8Zq05", "qd_plus_50_month": "https://buy.stripe.com/5kQfZh8VpeRG6v729j8Zq06", "qd_plus_50_year": "https://buy.stripe.com/14A9AT6Nh10Qg5H7tD8Zq07", "qd_plus_100_month": "https://buy.stripe.com/fZu6oH2x1dNCg5H15f8Zq08", "qd_plus_100_year": "https://buy.stripe.com/7sY3cv3B57pe06JaFP8Zq09", "qd_pro_5_month": "https://buy.stripe.com/00wdR9b3x7pe7zb9BL8Zq0a", "qd_pro_5_year": "https://buy.stripe.com/4gM7sLgnR5h66v79BL8Zq0b", "qd_pro_10_month": "https://buy.stripe.com/5kQcN51sX9xm9Hj7tD8Zq0c", "qd_pro_10_year": "https://buy.stripe.com/00wbJ18Vp9xmdXzeW58Zq0d", "qd_pro_25_month": "https://buy.stripe.com/aFa4gz8Vp7pef1D29j8Zq0e", "qd_pro_25_year": "https://buy.stripe.com/28E4gz7RlfVKbPr4hr8Zq0f", "qd_pro_50_month": "https://buy.stripe.com/9B65kD0oT8tidXz7tD8Zq0g", "qd_pro_50_year": "https://buy.stripe.com/fZu5kD2x1fVKf1D29j8Zq0h", "qd_pro_100_month": "https://buy.stripe.com/9B63cvdbFdNCdXz4hr8Zq0i", "qd_pro_100_year": "https://buy.stripe.com/eVq5kD4F9gZO7zb8xH8Zq0j"};
+    var prices = {"plus": {"5": 15, "10": 29, "25": 49, "50": 89, "100": 149}, "pro": {"5": 29, "10": 55, "25": 99, "50": 179, "100": 299}};
+    var form = document.getElementById('order-form');
+    function pick() {
+        var plan = form.plan.value, band = form.band.value, yearly = form.interval.value === 'year';
+        var p = prices[plan][band] * (yearly ? 10 : 1);
+        document.getElementById('order-price').textContent = '\u00a3' + p.toLocaleString('en-GB');
+        document.getElementById('order-per').textContent = yearly ? '/ year' : '/ month';
+        return links['qd_' + plan + '_' + band + '_' + form.interval.value];
+    }
+    form.addEventListener('change', pick);
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var url = pick();
+        if (url) { window.location.href = url; }
+    });
+    document.querySelectorAll('a[data-plan]').forEach(function (a) {
+        a.addEventListener('click', function () { form.plan.value = a.getAttribute('data-plan'); pick(); });
+    });
+    pick();
+})();
+</script>
 </body>
 </html>
