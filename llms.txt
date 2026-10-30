@@ -10,7 +10,7 @@ Key facts:
   - Pro: £29/month (up to 5 users), £55 (6–10), £99 (11–25), £179 (26–50), £299 (51–100).
   - Yearly billing: 12 months for the price of 10. Over 100 users: quote.
 - Hosted option: from £49/month (Plus) or £69/month (Pro) for up to 5 people, 2 numbers and 1,000 UK call minutes a month, hosted on UK servers.
-- Features: browser phone app (installable PWA), SIP desk phones (Yealink, Poly, Grandstream) and mobile SIP apps, opening hours, ring groups, IVR menus, follow-me to mobiles with call acceptance, transfer, hold, call park, voicemail to email, call recording with announcement, AI transcripts and summaries using the customer's own AI provider account, two-factor sign-in, passkeys, toll-fraud limits, 999 calls never blocked.
+- Features: phone in the browser, SIP desk phones (Yealink, Poly, Grandstream), opening hours, ring groups, IVR menus, follow-me to mobiles with call acceptance, transfer, hold, call park, voicemail to email, call recording with announcement, AI transcripts and summaries using the customer's own AI provider account, two-factor sign-in, passkeys, toll-fraud limits, 999 calls never blocked.
 
 ## Pages
 
