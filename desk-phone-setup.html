@@ -75,7 +75,7 @@
 <li>Go to <strong>Admin → Phones and apps → Add a phone</strong>.</li>
 <li>Choose the person and give the phone a name, such as "Reception desk".</li>
 <li>Under <strong>Set up automatically</strong>, choose the make, and enter the MAC address (any format, for example <code>80:5E:C0:12:34:56</code>).</li>
-<li>Optionally, fill in <strong>Only sign in from</strong> with the office's public IP address or host name. The phone then only works from the office.</li>
+<li>Optionally, fill in <strong>Only sign in from</strong> with the office's public IP address or host name. The phone then only works from the office, or from the same local network as your phone system. To allow only the addresses you list, tick <strong>Filter LAN addresses</strong>.</li>
 <li>Press <strong>Add phone</strong>.</li>
 </ol>
 <p>For a phone already in the list, choose its make and MAC address on its <strong>Automatic set-up</strong> line and press <strong>Save</strong>.</p>
@@ -181,7 +181,7 @@
 <tr><td>Nothing in the phone log</td><td>The phone didn't reach Quaver Desk. Check the address was copied exactly, the phone can reach the internet over HTTPS, and its firmware is current. On Grandstream, check the server path has no <code>https://</code>.</td></tr>
 <tr><td><em>Wrong provisioning login</em></td><td>Re-enter the user name and password. With DHCP option 66, enter them on the phone by hand.</td></tr>
 <tr><td><em>No phone is set up with MAC address …</em></td><td>Add the phone, or correct its MAC address.</td></tr>
-<tr><td><em>Asked from outside the addresses the phone is locked to</em></td><td>The office's public IP address isn't in the phone's <strong>Only sign in from</strong> list.</td></tr>
+<tr><td><em>Asked from outside the addresses the phone is locked to</em></td><td>The address shown in the log isn't in the phone's <strong>Only sign in from</strong> list. If it's a local address (such as 192.168.…), untick <strong>Filter LAN addresses</strong> or add it to the list.</td></tr>
 <tr><td>Downloads its settings but won't sign in</td><td>The firewall must let the phone reach the phone system on port 5061, and the phone must be at an address it's locked to.</td></tr>
 <tr><td>Busy lamp keys stay dark</td><td>Press <strong>Send settings now</strong>, wait a minute, and restart the phone if needed.</td></tr>
 </tbody>
