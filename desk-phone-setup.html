@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Set up desk phones automatically: Yealink, Grandstream and Fanvil · Quaver Desk</title>
+    <meta name="description" content="How to set up Yealink, Grandstream and Fanvil desk phones on Quaver Desk automatically, with DHCP option 66 or by hand, add busy lamp (BLF) keys, and fix common problems.">
+    <link rel="canonical" href="https://quaverdesk.co.uk/desk-phone-setup.html">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#14213d">
+    <meta property="og:title" content="Set up desk phones automatically">
+    <meta property="og:description" content="How to set up Yealink, Grandstream and Fanvil desk phones on Quaver Desk automatically, with DHCP option 66 or by hand, add busy lamp (BLF) keys, and fix common problems.">
+    <meta property="og:url" content="https://quaverdesk.co.uk/desk-phone-setup.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://quaverdesk.co.uk/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Quaver Desk: the business phone system you run yourself">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/style.css">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "TechArticle", "headline": "Set up desk phones automatically", "description": "How to set up Yealink, Grandstream and Fanvil desk phones on Quaver Desk automatically, with DHCP option 66 or by hand, add busy lamp (BLF) keys, and fix common problems.", "url": "https://quaverdesk.co.uk/desk-phone-setup.html", "publisher": {"@type": "Organization", "name": "Quaver Desk", "url": "https://quaverdesk.co.uk/"}, "about": {"@id": "https://quaverdesk.co.uk/#software"}}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://quaverdesk.co.uk/"}, {"@type": "ListItem", "position": 2, "name": "Help", "item": "https://quaverdesk.co.uk/help.html"}, {"@type": "ListItem", "position": 3, "name": "Set up desk phones automatically", "item": "https://quaverdesk.co.uk/desk-phone-setup.html"}]}</script>
+</head>
+<body>
+<a class="skip" href="/#main">Skip to content</a>
+
+<header class="top">
+    <div class="wrap">
+        <a class="logo" href="/" aria-label="Quaver Desk home">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#14213d"/><circle cx="31" cy="30" r="14" fill="none" stroke="#5eead4" stroke-width="7"/><path d="M38 37l10 10" stroke="#5eead4" stroke-width="7" stroke-linecap="round"/></svg>
+            Quaver<span>Desk</span>
+        </a>
+        <nav class="nav" aria-label="Main">
+            <a href="/#features">Features</a>
+            <a href="/#how">How it works</a>
+            <a href="/#pricing">Pricing</a>
+            <a href="/#faq">FAQ</a>
+            <a href="https://github.com/EthAsk/QuaverDesk">GitHub</a>
+            <a class="btn" href="/#order">Buy a licence</a>
+        </nav>
+        <a class="btn mobile-buy" href="/#pricing">Pricing</a>
+    </div>
+</header>
+
+<main id="main" class="page">
+<p class="eyebrow"><a href="/help.html">Help</a> · Desk phones</p>
+<h1>Set up desk phones automatically</h1>
+<p class="lead">Add a Yealink, Grandstream or Fanvil phone in Quaver Desk and point it at your provisioning address once. The phone downloads its account, a new admin password, UK time, voicemail and busy lamp keys by itself, then checks for changes every day.</p>
+
+<nav class="toc" aria-label="On this page">
+<strong>On this page</strong>
+<ol>
+<li><a href="#before">Before you start</a></li>
+<li><a href="#add">Add the phone</a></li>
+<li><a href="#point">Point the phone at Quaver Desk</a></li>
+<li><a href="#dhcp">Or use DHCP option 66</a></li>
+<li><a href="#check">Check it worked</a></li>
+<li><a href="#blf">Busy lamp keys (BLF)</a></li>
+<li><a href="#changes">Making changes</a></li>
+<li><a href="#log">The phone log</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+</ol>
+</nav>
+
+<h2 id="before">Before you start</h2>
+<ul>
+<li>You need the <strong>Plus or Pro plan</strong>, and an admin login.</li>
+<li>Supported phones: <strong>Yealink</strong> T-series, <strong>Grandstream</strong> GRP26xx and <strong>Fanvil</strong> X series, on current firmware. Other SIP phones and apps work too, but you type their settings in by hand.</li>
+<li>Phones only connect encrypted (TLS and SRTP), so very old firmware may need updating first.</li>
+<li>Have the phone's <strong>MAC address</strong> ready. It's on the label on the back.</li>
+</ul>
+
+<h2 id="add">1. Add the phone</h2>
+<ol>
+<li>Go to <strong>Admin → Phones and apps → Add a phone</strong>.</li>
+<li>Choose the person and give the phone a name, such as "Reception desk".</li>
+<li>Under <strong>Set up automatically</strong>, choose the make, and enter the MAC address (any format, for example <code>80:5E:C0:12:34:56</code>).</li>
+<li>Optionally, fill in <strong>Only sign in from</strong> with the office's public IP address or host name. The phone then only works from the office, or from the same local network as your phone system. To allow only the addresses you list, tick <strong>Filter LAN addresses</strong>.</li>
+<li>Press <strong>Add phone</strong>.</li>
+</ol>
+<p>For a phone already in the list, choose its make and MAC address on its <strong>Automatic set-up</strong> line and press <strong>Save</strong>.</p>
+
+<h2 id="point">2. Point the phone at Quaver Desk</h2>
+<p>The <strong>Automatic set-up</strong> card on the same page shows your company's <strong>Server URL</strong>, <strong>User name</strong> and <strong>Password</strong>, each with a copy button. Open the phone's web page (type its IP address, shown in its network menu, into a browser; a new phone's login is usually <code>admin</code> / <code>admin</code>) and enter them:</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Make</th><th>Where</th><th>Then</th></tr></thead>
+<tbody>
+<tr><td>Yealink</td><td>Settings → Auto Provision: Server URL, User Name, Password</td><td>Auto Provision Now</td></tr>
+<tr><td>Grandstream (GRP)</td><td>Maintenance → Upgrade and Provisioning: Config Upgrade Via <em>HTTPS</em>, Config Server Path (the address <strong>without</strong> <code>https://</code>; the card has a copy button for it), HTTP/HTTPS User Name and Password</td><td>Provision</td></tr>
+<tr><td>Fanvil (X series)</td><td>System → Auto Provision: Server URL, User Name, Password</td><td>Apply</td></tr>
+</tbody>
+</table>
+</div>
+<p>After its first download, the phone's web page has its own random admin password. To see it, press <strong>Show admin password</strong> on the phone's line.</p>
+
+<h2 id="dhcp">3. Or use DHCP option 66</h2>
+<p>Instead of typing the address into every phone, you can set it once on the office router as <strong>DHCP option 66</strong>, as a text value. The card shows the value to use, with the login built in: <code>https://phones:password@your-address/provision/…/</code>.</p>
+<ul>
+<li><strong>Add each phone first</strong> (step 1). Option 66 only tells phones where to look. A phone that hasn't been added is refused, and the refusal shows in the phone log.</li>
+<li><strong>Factory-reset second-hand phones.</strong> They may have option 66 turned off or another server saved.</li>
+<li><strong>Yealink takes the login from the address.</strong> Some Grandstream and Fanvil firmware ignores it. If the log says <em>Wrong provisioning login</em>, enter the user name and password on that phone once by hand.</li>
+</ul>
+<div class="notice" role="note">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+<p><strong>Keep the password private.</strong> Anything on the network can read option 66, so it can read the password too. With the password and a phone's MAC address, someone could download that phone's SIP password. Either use option 66 only on a separate network for phones (a voice VLAN), or use it just for the rollout, then remove it and press <strong>Make a new address and password</strong>.</p>
+</div>
+
+<h2 id="check">4. Check it worked</h2>
+<p>Look at the <strong>phone log</strong> at the bottom of <em>Phones and apps</em>. You should see <em>Phone downloaded its settings</em>, and the phone should sign in a moment later. The phone's line shows when it last fetched its settings, from where, and its model and firmware.</p>
+<p>The phone gets:</p>
+<ul>
+<li>its account, encrypted: TLS on port 5061, and compulsory SRTP for audio;</li>
+<li>the person's name on its screen;</li>
+<li>a new random password for its web page;</li>
+<li>UK time, with summer time;</li>
+<li><strong>*00</strong> on its voicemail key;</li>
+<li>its busy lamp keys, if you've chosen any;</li>
+<li>a daily check for changes.</li>
+</ul>
+<p>Settings changed on the phone itself are put back at its next check.</p>
+
+<h2 id="blf">Busy lamp keys (BLF)</h2>
+<p>A busy lamp key shows what a colleague's phone is doing:</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Lamp</th><th>Means</th></tr></thead>
+<tbody>
+<tr><td>Off or green</td><td>Free</td></tr>
+<tr><td>Flashing</td><td>Their phone is ringing</td></tr>
+<tr><td>On or red</td><td>They're on a call</td></tr>
+</tbody>
+</table>
+</div>
+<p>Colours vary a little by make. Press the key to call the colleague. Press it during a call to transfer the call to them.</p>
+<p><strong>To add them:</strong></p>
+<ol>
+<li>On <em>Phones and apps</em>, open <strong>Busy lamp keys</strong> on the phone's line.</li>
+<li>Tick the colleagues you want.</li>
+<li>Press <strong>Save keys</strong>.</li>
+</ol>
+<p>Key 1 stays the phone's own line. Colleagues follow on keys 2 onwards in extension order, up to 20. A phone set up automatically gets them within a minute.</p>
+<ul>
+<li>Until you save keys for a phone, Quaver Desk leaves its keys alone. Once you have, unticked colleagues' keys are cleared.</li>
+<li>People who leave, or who are made forward-only, drop off the keys automatically.</li>
+<li><strong>Phones set up by hand:</strong> the same panel lists a value for each colleague. On the phone's web page, set a key's type to <strong>BLF</strong>, account 1, and enter that value.</li>
+</ul>
+<p>Each person's lamp has its own private address, which is only given to phones in the same company. A ringing lamp calls the colleague; it doesn't pick up their call.</p>
+
+<h2 id="changes">Making changes</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>To</th><th>Do this</th></tr></thead>
+<tbody>
+<tr><td>Send changes now</td><td><strong>Send settings now</strong> on the phone's line. A signed-in phone fetches within a minute; otherwise it gets them at its daily check or when it restarts.</td></tr>
+<tr><td>See the phone's web page password</td><td><strong>Show admin password</strong> (you confirm your own password first)</td></tr>
+<tr><td>Change that password</td><td><strong>New admin password</strong></td></tr>
+<tr><td>Replace a broken phone</td><td>Change the MAC address on its line, then point the new phone at Quaver Desk</td></tr>
+<tr><td>Stop setting it up automatically</td><td>Choose <em>Off</em> on its <strong>Automatic set-up</strong> line. It keeps its settings.</td></tr>
+<tr><td>Change the company's provisioning login</td><td><strong>Make a new address and password</strong>. Phones keep working, but need the new values to fetch changes.</td></tr>
+<tr><td>Remove a phone</td><td><strong>Remove</strong>. It's signed out at once.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2 id="log">The phone log</h2>
+<p>Quaver Desk keeps a record of what happens to your phones, showing when, which phone, who did it (or <em>The phone</em>), from which IP address, and details:</p>
+<ul>
+<li>every settings download and every refusal;</li>
+<li>every time someone shows or changes a phone's password;</li>
+<li>every change to a phone's set-up, sign-in lock or busy lamp keys;</li>
+<li>every phone added or removed.</li>
+</ul>
+<p>Admins see the last 100 on <em>Phones and apps</em>. If we host your phone system, our support team can see them too.</p>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>What you see</th><th>What to check</th></tr></thead>
+<tbody>
+<tr><td>Nothing in the phone log</td><td>The phone didn't reach Quaver Desk. Check the address was copied exactly, the phone can reach the internet over HTTPS, and its firmware is current. On Grandstream, check the server path has no <code>https://</code>.</td></tr>
+<tr><td><em>Wrong provisioning login</em></td><td>Re-enter the user name and password. With DHCP option 66, enter them on the phone by hand.</td></tr>
+<tr><td><em>No phone is set up with MAC address …</em></td><td>Add the phone, or correct its MAC address.</td></tr>
+<tr><td><em>Asked from outside the addresses the phone is locked to</em></td><td>The address shown in the log isn't in the phone's <strong>Only sign in from</strong> list. If it's a local address (such as 192.168.…), untick <strong>Filter LAN addresses</strong> or add it to the list.</td></tr>
+<tr><td>Downloads its settings but won't sign in</td><td>The firewall must let the phone reach the phone system on port 5061, and the phone must be at an address it's locked to.</td></tr>
+<tr><td>Busy lamp keys stay dark</td><td>Press <strong>Send settings now</strong>, wait a minute, and restart the phone if needed.</td></tr>
+</tbody>
+</table>
+</div>
+<p>Running your own server? The technical version of this guide, including the voice server settings, is <a href="https://github.com/EthAsk/QuaverDesk/blob/main/docs/DESK-PHONES.md">on GitHub</a>. Still stuck? Email <a href="mailto:support@quaverdesk.co.uk">support@quaverdesk.co.uk</a>.</p>
+</main>
+
+
+<footer>
+    <div class="wrap">
+        <div class="cols">
+            <div>
+                <a class="logo" href="/" aria-label="Quaver Desk home">
+                    <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#14213d"/><circle cx="31" cy="30" r="14" fill="none" stroke="#5eead4" stroke-width="7"/><path d="M38 37l10 10" stroke="#5eead4" stroke-width="7" stroke-linecap="round"/></svg>
+                    Quaver<span>Desk</span>
+                </a>
+                <p style="margin-top:12px">The business phone system you run yourself.</p>
+            </div>
+            <div>
+                <h3>Product</h3>
+                <ul>
+                    <li><a href="/#features">Features</a></li>
+                    <li><a href="/#pricing">Pricing</a></li>
+                    <li><a href="/#order">Buy a licence</a></li>
+                    <li><a href="https://billing.stripe.com/p/login/8x28wP4F96la2eR15f8Zq00">Manage your subscription</a></li>
+                    <li><a href="https://github.com/EthAsk/QuaverDesk">Code and install guide</a></li>
+                    <li><a href="/partners.html">Partners and resellers</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Guides</h3>
+                <ul>
+                    <li><a href="/self-hosted-phone-system.html">Self-hosted phone system</a></li>
+                    <li><a href="/3cx-alternative.html">A 3CX alternative</a></li>
+                    <li><a href="/sip-trunk-phone-system.html">Phone system for your SIP trunk</a></li>
+                    <li><a href="/phone-system-for-charities.html">For charities and not-for-profits</a></li>
+                    <li><a href="/help.html">Help centre</a></li>
+                    <li><a href="/desk-phone-setup.html">Desk phone set-up</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="https://github.com/EthAsk/QuaverDesk/blob/main/COMMERCIAL-TERMS.md">Licence terms</a></li>
+                    <li><a href="https://github.com/EthAsk/QuaverDesk/blob/main/LICENSING.md">Licensing explained</a></li>
+                    <li><a href="https://github.com/EthAsk/QuaverDesk/blob/main/DISCLAIMER.md">Disclaimer</a></li>
+                    <li><a href="/privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="mailto:sales@quaverdesk.co.uk">sales@quaverdesk.co.uk</a></li>
+                    <li><a href="https://github.com/EthAsk/QuaverDesk/blob/main/SECURITY.md">Report a security issue</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="legal">© 2026 Ethan Askew trading as Quaver Desk, 119 Ridgehill Avenue, Intake, Sheffield, S12 2GN. "Quaver Desk" is a trading name of Ethan Askew.</p>
+    </div>
+</footer>
+</body>
+</html>

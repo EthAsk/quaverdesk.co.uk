@@ -20,11 +20,14 @@ Key facts:
 - [A phone system for your SIP trunk (Gamma, Voiceflex, Twilio and more)](https://quaverdesk.co.uk/sip-trunk-phone-system.html)
 - [A phone system for charities and not-for-profits](https://quaverdesk.co.uk/phone-system-for-charities.html)
 - [Partner programme for IT firms and MSPs: partner rates on licences](https://quaverdesk.co.uk/partners.html)
+- [Help centre](https://quaverdesk.co.uk/help.html)
+- [Set up Yealink, Grandstream and Fanvil desk phones automatically, with busy lamp (BLF) keys](https://quaverdesk.co.uk/desk-phone-setup.html)
 
 ## Code and docs
 
 - [Source code and install guide (GitHub)](https://github.com/EthAsk/QuaverDesk)
 - [Licensing explained](https://github.com/EthAsk/QuaverDesk/blob/main/LICENSING.md)
+- [Desk phone provisioning and BLF, technical guide](https://github.com/EthAsk/QuaverDesk/blob/main/docs/DESK-PHONES.md)
 
 ## Contact
 

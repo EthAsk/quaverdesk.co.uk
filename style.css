@@ -253,3 +253,18 @@ footer .legal { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(-
 .order-price { margin: 0; }
 .order-price .price { font-size: 1.8rem; font-weight: 800; }
 .order-grid .btn { font: inherit; font-weight: 650; cursor: pointer; }
+
+/* Help centre */
+.page h2[id] { scroll-margin-top: 80px; }
+.page code { font-size: .88em; background: var(--accent-soft); padding: .1em .35em; border-radius: 6px; overflow-wrap: anywhere; }
+.page .table-wrap { margin: 16px 0; }
+.page .table-wrap table { min-width: 0; }
+.page .table-wrap td, .page .table-wrap th { padding: 10px 14px; vertical-align: top; }
+.page .notice { margin: 20px 0; }
+.page .eyebrow a { color: inherit; }
+.toc { border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); padding: 16px 20px; margin: 28px 0; }
+.toc ol { margin: 8px 0 0; columns: 2 14em; }
+.toc li { margin: .25em 0; }
+.help-list { list-style: none; padding-left: 0 !important; }
+.help-list li { margin: 0 0 18px; }
+.muted { color: var(--muted); }
