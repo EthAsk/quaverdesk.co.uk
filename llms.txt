@@ -23,6 +23,7 @@ Key facts:
 - [Help centre](https://quaverdesk.co.uk/help.html)
 - [Set up Yealink, Grandstream and Fanvil desk phones automatically, with busy lamp (BLF) keys](https://quaverdesk.co.uk/desk-phone-setup.html)
 - [Users, lobby phones and call limits: desk-phone-only users, colleagues-only calling, 999, voicemail on or off](https://quaverdesk.co.uk/users-and-call-limits.html)
+- [Roadmap: what's coming next (call queues, single sign-on, hosted minute bundles, hosted plans for partners) and later](https://quaverdesk.co.uk/roadmap.html)
 
 ## Code and docs
 
