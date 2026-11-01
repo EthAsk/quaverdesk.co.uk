@@ -55,6 +55,7 @@
 <li><a href="#point">Point the phone at Quaver Desk</a></li>
 <li><a href="#dhcp">Or use DHCP option 66</a></li>
 <li><a href="#check">Check it worked</a></li>
+<li><a href="#approval">New addresses and approval</a></li>
 <li><a href="#blf">Busy lamp keys (BLF)</a></li>
 <li><a href="#changes">Making changes</a></li>
 <li><a href="#log">The phone log</a></li>
@@ -121,6 +122,16 @@
 <p>Settings changed on the phone itself are put back at its next check.</p>
 <p>The <strong>Status</strong> column on <em>Phones and apps</em> shows whether each phone is online now, with the address it signs in from and its model. It shows <em>Unknown</em> if the voice server can't be reached. For a phone with no person behind it, such as a reception or lobby phone, see <a href="/users-and-call-limits.html#lobby">desk-phone-only users</a>.</p>
 
+<h2 id="approval">New addresses and approval</h2>
+<p>A MAC address isn't secret, so the provisioning login and MAC address alone aren't enough to get a phone's settings.</p>
+<ul>
+<li><strong>Set-up window.</strong> When you add a phone, or change its make or MAC address, it has 24 hours to download its settings from anywhere. The address it uses becomes its <strong>trusted address</strong>, and the window closes.</li>
+<li><strong>Daily checks</strong> from the trusted address carry on as normal.</li>
+<li><strong>Anywhere else</strong>, the download is held back and the phone's line shows <strong>Waiting for approval</strong>, with the address and phone model. This also happens when a phone moves, or when your office's internet address changes. If it really is your phone, press <strong>Approve</strong>.</li>
+<li>For a replacement handset or a move to a new site, press <strong>Open set-up window</strong>.</li>
+</ul>
+<p>Every approval and set-up window is recorded in the phone log.</p>
+
 <h2 id="blf">Busy lamp keys (BLF)</h2>
 <p>A busy lamp key shows what a colleague's phone is doing:</p>
 <div class="table-wrap">
@@ -183,6 +194,7 @@
 <tr><td><em>Wrong provisioning login</em></td><td>Re-enter the user name and password. With DHCP option 66, enter them on the phone by hand.</td></tr>
 <tr><td><em>No phone is set up with MAC address …</em></td><td>Add the phone, or correct its MAC address.</td></tr>
 <tr><td><em>Asked from outside the addresses the phone is locked to</em></td><td>The address shown in the log isn't in the phone's <strong>Only sign in from</strong> list. If it's a local address (such as 192.168.…), untick <strong>Filter LAN addresses</strong> or add it to the list.</td></tr>
+<tr><td><em>Settings download waiting for approval</em></td><td>The phone asked from an address it hasn't used before. Check the address on the phone's line, then press <strong>Approve</strong>, or <strong>Open set-up window</strong> for a new handset. See <a href="#approval">New addresses and approval</a>.</td></tr>
 <tr><td>Downloads its settings but won't sign in</td><td>The firewall must let the phone reach the phone system on port 5061, and the phone must be at an address it's locked to.</td></tr>
 <tr><td>Busy lamp keys stay dark</td><td>Press <strong>Send settings now</strong>, wait a minute, and restart the phone if needed.</td></tr>
 </tbody>
