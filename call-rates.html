@@ -2,6 +2,8 @@
 <html lang="en-GB">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; manifest-src 'self'; form-action 'self'; base-uri 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Call rates for hosted Quaver Desk · Quaver Desk</title>
     <meta name="description" content="What calls cost on hosted Quaver Desk beyond your included UK minutes: UK landlines and mobiles, and a price per minute for every country we can call.">
@@ -300,16 +302,7 @@
 <p>If you need a country that isn't listed, or a rate agreed for heavy use, ask us.</p>
 <div class="actions"><a class="btn" href="mailto:sales@quaverdesk.co.uk?subject=Quaver%20Desk%20call%20rates">Email sales</a></div>
 </div>
-<script>
-(function () {
-  var box = document.getElementById('rate-filter'), rows = document.querySelectorAll('#rates tbody tr');
-  if (!box) return;
-  box.addEventListener('input', function () {
-    var q = box.value.trim().toLowerCase();
-    rows.forEach(function (r) { r.hidden = q !== '' && r.textContent.toLowerCase().indexOf(q) === -1; });
-  });
-})();
-</script>
+<script src="/rate-filter.js" defer></script>
 </main>
 
 
