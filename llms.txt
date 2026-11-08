@@ -9,7 +9,7 @@ Key facts:
   - Plus: £15/month (up to 5 users), £29 (6–10), £49 (11–25), £89 (26–50), £149 (51–100).
   - Pro: £29/month (up to 5 users), £55 (6–10), £99 (11–25), £179 (26–50), £299 (51–100).
   - Yearly billing: 12 months for the price of 10. Over 100 users: quote.
-- Hosted option: from £49/month (Plus) or £69/month (Pro) for up to 5 people, 2 numbers and 1,000 UK call minutes a month, hosted on UK servers.
+- Hosted option, on UK servers: Plus/Pro per month: £49/£69 (up to 5 people, 2 numbers, 1,000 UK call minutes a month), £89/£129 (6–10, 4 numbers, 2,500 minutes), £179/£259 (11–25, 8 numbers, 6,000 minutes), £329/£479 (26–50, 15 numbers, 12,000 minutes). Over 50: quote. Included minutes cover incoming calls and calls to UK landlines and mobiles; past them, and for international calls, calls are charged per minute (call-rates page). Calls on a customer's own SIP provider use no minutes and are not charged.
 - Features: phone in the browser, SIP desk phones (Yealink, Poly, Grandstream), opening hours, ring groups, IVR menus, follow-me to mobiles with call acceptance, transfer, hold, call park, voicemail to email, call recording with announcement, AI transcripts and summaries using the customer's own AI provider account, two-factor sign-in, passkeys, toll-fraud limits, 999 calls never blocked.
 
 ## Pages
@@ -19,11 +19,12 @@ Key facts:
 - [A 3CX alternative for small UK businesses](https://quaverdesk.co.uk/3cx-alternative.html)
 - [A phone system for your SIP trunk (Gamma, Voiceflex, Twilio and more)](https://quaverdesk.co.uk/sip-trunk-phone-system.html)
 - [A phone system for charities and not-for-profits](https://quaverdesk.co.uk/phone-system-for-charities.html)
-- [Partner programme for IT firms and MSPs: partner rates on licences](https://quaverdesk.co.uk/partners.html)
+- [Hosted call rates: price per minute for every country](https://quaverdesk.co.uk/call-rates.html)
+- [Partner programme for IT firms and MSPs: partner rates on licences and hosting](https://quaverdesk.co.uk/partners.html)
 - [Help centre](https://quaverdesk.co.uk/help.html)
 - [Set up Yealink, Grandstream and Fanvil desk phones automatically, with busy lamp (BLF) keys](https://quaverdesk.co.uk/desk-phone-setup.html)
 - [Users, lobby phones and call limits: desk-phone-only users, colleagues-only calling, 999, voicemail on or off](https://quaverdesk.co.uk/users-and-call-limits.html)
-- [Roadmap: what's coming next (call queues, single sign-on, hosted minute bundles, hosted plans for partners) and later](https://quaverdesk.co.uk/roadmap.html)
+- [Roadmap: what's coming next (call queues, single sign-on, hosted minute bundles) and later](https://quaverdesk.co.uk/roadmap.html)
 
 ## Code and docs
 
