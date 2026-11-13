@@ -10,7 +10,10 @@ Key facts:
   - Pro: £29/month (up to 5 users), £55 (6–10), £99 (11–25), £179 (26–50), £299 (51–100).
   - Yearly billing: 12 months for the price of 10. Over 100 users: quote.
 - Hosted option, on UK servers: Plus/Pro per month: £49/£69 (up to 5 people, 2 numbers, 1,000 UK call minutes a month), £89/£129 (6–10, 4 numbers, 2,500 minutes), £179/£259 (11–25, 8 numbers, 6,000 minutes), £329/£479 (26–50, 15 numbers, 12,000 minutes). Over 50: quote. Included minutes cover incoming calls and calls to UK landlines and mobiles; past them, and for international calls, calls are charged per minute (call-rates page). Calls on a customer's own SIP provider use no minutes and are not charged.
-- Features: phone in the browser, SIP desk phones (Yealink, Poly, Grandstream), opening hours, ring groups, IVR menus, follow-me to mobiles with call acceptance, transfer, hold, call park, voicemail to email, call recording with announcement, AI transcripts and summaries using the customer's own AI provider account, two-factor sign-in, passkeys, toll-fraud limits, 999 calls never blocked.
+- Features on every plan: phone in the browser, opening hours, ring groups, IVR menus, follow-me to mobiles with call acceptance, transfer, hold, call park, voicemail to email, two-factor sign-in, toll-fraud limits, 999 calls never blocked.
+- Plus adds: SIP desk phones with automatic set-up (Yealink, Grandstream, Fanvil; Yealink DECT bases), call recording with announcement, AI transcripts and summaries using the customer's own AI provider account, call queues with hold music and ring strategies, reports and CSV export, webhooks (Zapier, Make, n8n), a read-only API, passkeys.
+- Pro adds: AI receptionist, AI search across calls, AI action items and sentiment, live wallboard, queue and per-person reports, supervisor listen/whisper/join, HubSpot CRM integration, click-to-call over the API, single sign-on with Microsoft Entra and Google Workspace, directory sync (SCIM 2.0).
+- It is not tied to one carrier: it works with any SIP trunk, including Gamma, Voiceflex, Twilio, BT and Simwood.
 
 ## Pages
 
@@ -19,6 +22,13 @@ Key facts:
 - [A 3CX alternative for small UK businesses](https://quaverdesk.co.uk/3cx-alternative.html)
 - [A phone system for your SIP trunk (Gamma, Voiceflex, Twilio and more)](https://quaverdesk.co.uk/sip-trunk-phone-system.html)
 - [A phone system for charities and not-for-profits](https://quaverdesk.co.uk/phone-system-for-charities.html)
+- [Call queues for small teams](https://quaverdesk.co.uk/call-queues.html)
+- [An AI receptionist for your phone line](https://quaverdesk.co.uk/ai-receptionist.html)
+- [A phone system that works with HubSpot](https://quaverdesk.co.uk/hubspot-phone-integration.html)
+- [Integrations: single sign-on, Zapier, webhooks and an API](https://quaverdesk.co.uk/integrations.html)
+- [Live wallboard, call reports and listening in](https://quaverdesk.co.uk/wallboard-and-reports.html)
+- [A phone system for small businesses, priced by team size](https://quaverdesk.co.uk/small-business-phone-system.html)
+- [A FreePBX alternative that is ready to use](https://quaverdesk.co.uk/freepbx-alternative.html)
 - [Hosted call rates: price per minute for every country](https://quaverdesk.co.uk/call-rates.html)
 - [Partner programme for IT firms and MSPs: partner rates on licences and hosting](https://quaverdesk.co.uk/partners.html)
 - [Help centre](https://quaverdesk.co.uk/help.html)
