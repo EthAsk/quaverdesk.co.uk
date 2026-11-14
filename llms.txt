@@ -33,6 +33,10 @@ Key facts:
 - [Partner programme for IT firms and MSPs: partner rates on licences and hosting](https://quaverdesk.co.uk/partners.html)
 - [Help centre](https://quaverdesk.co.uk/help.html)
 - [Set up Yealink, Grandstream and Fanvil desk phones automatically, with busy lamp (BLF) keys](https://quaverdesk.co.uk/desk-phone-setup.html)
+- [Set up Yealink phones with Quaver Desk](https://quaverdesk.co.uk/yealink-phone-setup.html)
+- [Set up Grandstream phones with Quaver Desk](https://quaverdesk.co.uk/grandstream-phone-setup.html)
+- [Set up Fanvil phones with Quaver Desk](https://quaverdesk.co.uk/fanvil-phone-setup.html)
+- [Set up Yealink DECT cordless phones with Quaver Desk](https://quaverdesk.co.uk/yealink-dect-setup.html)
 - [Users, lobby phones and call limits: desk-phone-only users, colleagues-only calling, 999, voicemail on or off](https://quaverdesk.co.uk/users-and-call-limits.html)
 - [Roadmap: what's coming next (queue call-back, hosted minute bundles) and later](https://quaverdesk.co.uk/roadmap.html)
 
