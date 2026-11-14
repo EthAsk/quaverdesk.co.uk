@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; manifest-src 'self'; form-action 'self'; base-uri 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Set up Yealink phones with Quaver Desk · Quaver Desk</title>
+    <meta name="description" content="Set up Yealink T-series desk phones on Quaver Desk automatically: add the MAC address, enter one address on the phone, and it downloads its account, BLF keys and settings.">
+    <link rel="canonical" href="https://quaverdesk.co.uk/yealink-phone-setup.html">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#14213d">
+    <meta property="og:title" content="Set up Yealink phones with Quaver Desk">
+    <meta property="og:description" content="Set up Yealink T-series desk phones on Quaver Desk automatically: add the MAC address, enter one address on the phone, and it downloads its account, BLF keys and settings.">
+    <meta property="og:url" content="https://quaverdesk.co.uk/yealink-phone-setup.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://quaverdesk.co.uk/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Quaver Desk: the business phone system you run yourself">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/style.css">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Set up Yealink phones with Quaver Desk", "description": "Set up Yealink T-series desk phones on Quaver Desk automatically: add the MAC address, enter one address on the phone, and it downloads its account, BLF keys and settings.", "url": "https://quaverdesk.co.uk/yealink-phone-setup.html", "publisher": {"@type": "Organization", "name": "Quaver Desk", "url": "https://quaverdesk.co.uk/"}, "about": {"@id": "https://quaverdesk.co.uk/#software"}}</script>
+</head>
+<body>
+<a class="skip" href="/#main">Skip to content</a>
+
+<header class="top">
+    <div class="wrap">
+        <a class="logo" href="/" aria-label="Quaver Desk home">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#14213d"/><circle cx="31" cy="30" r="14" fill="none" stroke="#5eead4" stroke-width="7"/><path d="M38 37l10 10" stroke="#5eead4" stroke-width="7" stroke-linecap="round"/></svg>
+            Quaver<span>Desk</span>
+        </a>
+        <nav class="nav" aria-label="Main">
+            <a href="/#features">Features</a>
+            <a href="/#how">How it works</a>
+            <a href="/#pricing">Pricing</a>
+            <a href="/#faq">FAQ</a>
+            <a href="https://github.com/EthAsk/QuaverDesk">GitHub</a>
+            <a class="btn" href="/#order">Buy a licence</a>
+        </nav>
+        <a class="btn mobile-buy" href="/#pricing">Pricing</a>
+    </div>
+</header>
+
+<main id="main" class="page">
+<p class="eyebrow"><a href="/help.html">Help</a> · Desk phones</p>
+<h1>Set up Yealink phones with Quaver Desk</h1>
+<p class="lead">Yealink T-series desk phones set themselves up on Quaver Desk. You add the phone by its MAC address, point it at your provisioning address once, and it downloads its account, busy lamp keys and settings, then checks for changes every day.</p>
+
+<h2>Which Yealink phones</h2>
+<p>The T-series desk phones (T3x, T4x and T5x, such as the T31P, T33G, T43U, T46U, T53 and T54W) on current firmware. Phones only connect encrypted, so very old firmware may need updating first. For cordless handsets, see <a href="/yealink-dect-setup.html">Yealink DECT set-up</a>.</p>
+
+<h2>Three steps</h2>
+<ol>
+<li><strong>Add the phone.</strong> In Quaver Desk go to <strong>Admin → Phones and apps → Add a phone</strong>. Choose the person, choose <strong>Yealink</strong> as the make, and enter the MAC address from the label on the back.</li>
+<li><strong>Point the phone at Quaver Desk.</strong> Open the phone's web page (its IP address is under <em>Menu → Status</em>; a new phone's login is usually <code>admin</code> / <code>admin</code>). Go to <strong>Settings → Auto Provision</strong> and paste in the <strong>Server URL</strong>, <strong>User Name</strong> and <strong>Password</strong> from the <em>Automatic set-up</em> card in Quaver Desk. Press <strong>Auto Provision Now</strong>.</li>
+<li><strong>Check it worked.</strong> The phone restarts its account and signs in. The phone log in Quaver Desk shows <em>Phone downloaded its settings</em>.</li>
+</ol>
+
+<h2>Setting up a whole office at once</h2>
+<p>Yealink phones read the provisioning address, with its login, from <strong>DHCP option 66</strong> on your router. Add every phone in Quaver Desk first, set option 66 to the value on the <em>Automatic set-up</em> card, and plug the phones in. Factory-reset second-hand phones first, and remove option 66 (or keep it to a voice VLAN) once the rollout is done, because anything on that network can read it.</p>
+<h2>What the phone is given</h2>
+<ul>
+<li>Its account, encrypted: TLS for signalling and compulsory SRTP for audio.</li>
+<li>The person's name on its screen, UK time with summer time, and <code>*00</code> on its voicemail key.</li>
+<li>A new random password for its own web page. The <code>user</code> and <code>var</code> logins get one too, so none keeps its default.</li>
+<li>Busy lamp (BLF) keys for the colleagues you tick: see who is on a call, press to call them, press during a call to transfer.</li>
+<li>A daily check for changes. Settings changed on the phone itself are put back at its next check.</li>
+</ul>
+
+<h2>Busy lamp keys on Yealink</h2>
+<p>Key 1 stays the phone's own line; colleagues follow on the next line keys in extension order, up to 20. Green or off is free, flashing is ringing, red is on a call.</p>
+<h2>Kept safe</h2>
+<ul>
+<li>A new phone has 24 hours to fetch its settings. The address it uses becomes its trusted address; a request from anywhere else waits for an admin to press <strong>Approve</strong>.</li>
+<li>You can lock a phone to your office's internet address or host name, so it only signs in from there.</li>
+<li>Every download, refusal and change is in the phone log.</li>
+</ul>
+<p>The full walk-through, including DHCP option 66, approvals and troubleshooting, is in <a href="/desk-phone-setup.html">desk phone set-up</a>.</p>
+
+<div class="cta" style="margin-top:48px">
+<h2>Try it free</h2>
+<p>Up to 3 users, real calls, no card and no time limit. Desk phones are on Plus, from £15 a month for up to 5 users.</p>
+<div class="actions"><a class="btn" href="https://github.com/EthAsk/QuaverDesk">Install for free</a><a class="btn ghost" href="/#pricing">See pricing</a></div>
+</div>
+</main>
+
+
+<footer>
+    <div class="wrap">
+        <div class="cols">
+            <div>
+                <a class="logo" href="/" aria-label="Quaver Desk home">
+                    <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#14213d"/><circle cx="31" cy="30" r="14" fill="none" stroke="#5eead4" stroke-width="7"/><path d="M38 37l10 10" stroke="#5eead4" stroke-width="7" stroke-linecap="round"/></svg>
+                    Quaver<span>Desk</span>
+                </a>
+                <p style="margin-top:12px">The business phone system you run yourself.</p>
+            </div>
+            <div>
+                <h3>Product</h3>
+                <ul>
+                    <li><a href="/#features">Features</a></li>
+                    <li><a href="/#pricing">Pricing</a></li>
+                    <li><a href="/call-rates.html">Hosted call rates</a></li>
+                    <li><a href="/#order">Buy a licence</a></li>
+                    <li><a href="https://billing.stripe.com/p/login/8x28wP4F96la2eR15f8Zq00">Manage your subscription</a></li>
+                    <li><a href="https://github.com/EthAsk/QuaverDesk">Code and install guide</a></li>
+                    <li><a href="/partners.html">Partners and resellers</a></li>
+                    <li><a href="/roadmap.html">Roadmap</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Guides</h3>
+                <ul>
+                    <li><a href="/self-hosted-phone-system.html">Self-hosted phone system</a></li>
+                    <li><a href="/3cx-alternative.html">A 3CX alternative</a></li>
+                    <li><a href="/sip-trunk-phone-system.html">Phone system for your SIP trunk</a></li>
+                    <li><a href="/phone-system-for-charities.html">For charities and not-for-profits</a></li>
+                    <li><a href="/small-business-phone-system.html">Small business phone system</a></li>
+                    <li><a href="/freepbx-alternative.html">A FreePBX alternative</a></li>
+                    <li><a href="/help.html">Help centre</a></li>
+                    <li><a href="/desk-phone-setup.html">Desk phone set-up</a></li>
+                    <li><a href="/yealink-phone-setup.html">Yealink phones</a></li>
+                    <li><a href="/grandstream-phone-setup.html">Grandstream phones</a></li>
+                    <li><a href="/fanvil-phone-setup.html">Fanvil phones</a></li>
+                    <li><a href="/yealink-dect-setup.html">Yealink DECT (cordless)</a></li>
+                </ul>
+                <h3 style="margin-top:20px">Features</h3>
+                <ul>
+                    <li><a href="/call-queues.html">Call queues</a></li>
+                    <li><a href="/ai-receptionist.html">AI receptionist</a></li>
+                    <li><a href="/hubspot-phone-integration.html">HubSpot integration</a></li>
+                    <li><a href="/integrations.html">Integrations and API</a></li>
+                    <li><a href="/wallboard-and-reports.html">Wallboard and reports</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="https://github.com/EthAsk/QuaverDesk/blob/main/COMMERCIAL-TERMS.md">Licence terms</a></li>
+                    <li><a href="https://github.com/EthAsk/QuaverDesk/blob/main/LICENSING.md">Licensing explained</a></li>
+                    <li><a href="https://github.com/EthAsk/QuaverDesk/blob/main/DISCLAIMER.md">Disclaimer</a></li>
+                    <li><a href="/privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="mailto:sales@quaverdesk.co.uk">sales@quaverdesk.co.uk</a></li>
+                    <li><a href="https://github.com/EthAsk/QuaverDesk/blob/main/SECURITY.md">Report a security issue</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="legal">© 2026 Ethan Askew trading as Quaver Desk, 119 Ridgehill Avenue, Intake, Sheffield, S12 2GN. "Quaver Desk" is a trading name of Ethan Askew.</p>
+    </div>
+</footer>
+</body>
+</html>
